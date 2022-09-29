@@ -1,0 +1,56 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  background: rgb(238, 255, 0);
+  width: 90%;
+  height: 10vh;
+  margin: auto;
+  align-items: center;
+}
+nav {
+  background-color: red;
+  flex: 2;
+}
+.jonas-container {
+  background-color: green;
+  flex: 1;
+}
+.mads-container {
+  background-color: aqua;
+  flex: 1;
+}
+.jonas-container,
+.mads-container,
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links {
+  justify-content: space-between;
+}
+.nav-link {
+  text-decoration: none;
+}
+/* TO DO: Section Images on:hover = display different pictures|SIGN|NOT DONE| */
+section {
+  display: flex;
+  width: 90%;
+  background-color: aqua;
+  gap: 10px;
+}
+.introduction {
+  justify-content: flex-start;
+}
+.introduction-image-container {
+  justify-content: flex-end;
+}
+.section-image {
+  height: 40vh;
+}

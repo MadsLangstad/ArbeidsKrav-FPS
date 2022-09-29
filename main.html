@@ -4,10 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <title>Document</title>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <!--CONSIDER: 2x LOGO in/dropdown menu/ mute/un-mute(if audio implemented) instead of authors(authors in footer instead)-->
+      <div class="jonas-container">Jonas E. Bergenheim</div>
+      <nav>
+        <!--TO DO: Add go to SECTION on LINK:CLICK |SIGN|NOT DONE-->
+        <ul class="nav-links">
+          <li><a class="nav-link" href="">LINK1</a></li>
+          <li><a class="nav-link" href="">LINK2</a></li>
+          <li><a class="nav-link" href="">LINK3</a></li>
+        </ul>
+      </nav>
+      <div class="mads-container">Mads E. Langstad</div>
+    </header>
+    <!--TO DO MAIN:-->
+    <main>
+      <!--TO DO: Make text boxes in content scrollable and no overflow |SIGN|NOT DONE-->
+      <section class="introduction">
+        <div class="introduction-text">
+          <h2>Introduction</h2>
+          <!--TO DO: FPS marked with strong: create hover and display image on hover| SIGN |NOT DONE|  -->
+
+          <p>
+            First-person shooter (FPS) is a sub-genre of shooter video games
+            centered on gun and other weapon-based combat in a
+            <strong>first-person perspective</strong>, with the player
+            experiencing the action through the eyes of the protagonist and
+            controlling the player character in a three-dimensional space.<br />The
+            genre shares common traits with other shooter games, and in turn
+            falls under the action game genre.<br />
+            Since the genre's inception, advanced 3D and pseudo-3D graphics have
+            challenged hardware development, and multiplayer gaming has been
+            integral.
+          </p>
+        </div>
+        <!--TO DO: Section images on:hover = Display different Images |SIGN|NOT DONE| -->
+        <div class="introduction-image-container">
+          <img
+            class="section-image"
+            src="./images/cs-section-image.png"
+            alt="Countrstrike"
+          />
+        </div>
+      </section>
+      <section class="description">
+        <div class="description-text">
+          <h2>HISTORY</h2>
+          <p>A bunch of shit about the history of first person shooter?</p>
+        </div>
+        <div class="description-image-container">
+          <img
+            class="section-image"
+            src="./images/tarkov-section-image.jpg"
+            alt="PlaceholderIMG"
+          />
+        </div>
+      </section>
+      <section class="best-games">
+        <div class="best-games-text">
+          <h2>BEST GAMES</h2>
+          <p>A bunch of shit about the best games</p>
+        </div>
+        <div class="best-games-image-container">
+          <img src="" alt="" />
+        </div>
+      </section>
+    </main>
+    <footer>MADE BY ECT ECT</footer>
   </body>
 </html>
