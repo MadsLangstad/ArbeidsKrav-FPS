@@ -1,61 +1,177 @@
-/* Colors:
-          #050505,
-          #123345,
-          #75727E,
-          #FF0039*/
+/* Colors */
+/* black    #000000,
+   darkgrey #212121,
+   lightgrey #363636
+*/
 
+/* Fonts: Ubuntu300, Lato900  */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
+
+/* Global styling */
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 2000px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    background: radial-gradient(
+        farthest-side at bottom left,
+        rgba(255, 0, 255, 0.5),
+        #246756
+      ),
+      radial-gradient(
+        farthest-corner at bottom right,
+        rgba(255, 50, 50, 0.5),
+        #246756 400px
+      );
+  }
 
-html {
-  height: 100vh;
-  background-color: #464646;
+  h1 {
+    animation: moveInDown 3s ease-in-out;
+    position: absolute;
+    top: 1.5s;
+    margin-top: 1.5%;
+    color: #fff;
+    font-weight: 800;
+    position: relative;
+    font-size: 120px;
+    letter-spacing: 10px;
+    max-height: 100px;
+    text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+      #ff2d95 0px 0px 20px, #ff2d95 0px 0px 30px, #ff2d95 0px 0px 40px,
+      #ff2d95 0px 0px 50px, #ff2d95 0px 0px 75px;
+  }
+  h1:hover {
+    content: attr(REFL-TEXT);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateX(180deg);
+    line-height: -1%;
+    transform-origin: bottom;
+    background: linear-gradient(to top, transparent);
+    -webkit-background-clip-: transparent;
+    color: #ffffff;
+    opacity: 0.4;
+  }
+
+  .top-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .circle-menu {
+    position: relative;
+    position: absolute;
+    top: 45%;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+  }
+
+  .circle-menu:before,
+  #cross-vertical,
+  #cross-horizontal {
+    animation: mymove 1s ease-in-out;
+    top: 41%;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+  }
+
+  #cross-vertical {
+    position: absolute;
+    height: 3px;
+    width: 260px;
+    left: 5%;
+    top: 50%;
+    background-color: #ffffff;
+  }
+
+  #cross-horizontal {
+    position: absolute;
+    height: 260px;
+    width: 3px;
+    left: 50%;
+    top: 5%;
+    background-color: #ffffff;
+  }
+
+  /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  /*fdsjjfhds*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }
 
-body {
-  margin: 0px 100px 0px 100px;
-  display: flex;
-  justify-content: center;
-  background-color: #050505;
-  position: relative;
-  height: 100vh;
+@keyframes mymove {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-a {
-  position: absolute;
-  top: 13px;
-  right: 50px;
-  color: #ffffff;
-  font-size: 20px;
-  text-decoration: none;
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
 }
 
-.header {
-  height: 100px;
-  margin: 0;
-  align-items: center;
-  background-color: red;
+@keyframes spin {
+  0% {
+    rotate: calc(0deg);
+  }
+  33% {
+    rotate: calc(360deg);
+  }
+  66% {
+    rotate: calc(-360deg);
+  }
+  100% {
+    rotate: calc(0deg);
+  }
 }
 
-.main-container {
-  width: 100%;
+@keyframes moveInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
-.main-content {
-  height: 100vh;
-  background-color: #050505;
-}
-
-.main-content img {
-  position: absolute;
-  left: 50px;
-  bottom: -18%;
-}
-
-
-h1 {
-  font-size: 100px;
-  color: red;
+@keyframes textShadow {
+  50% {
+    text-shadow: 10px 20px 30px;
+  }
 }
