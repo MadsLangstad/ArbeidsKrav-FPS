@@ -12,9 +12,20 @@
       button:active + embed {
         display: block;
       }
+      img {
+        display: none;
+      }
+
+      span:hover + img {
+        display: block;
+      }
     </style>
   </head>
   <body>
+    <p>
+      This is some text. <span>HOVER OVER ME</span>
+      <img src="./images/fpsview.jpg" />
+    </p>
     <button>Play Sound</button>
     <embed src="/audio/cheekie-breekie.mp3" />
   </body>

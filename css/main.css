@@ -14,7 +14,7 @@ html {
   }
 }
 body {
-  font-family: sans-serif;
+  font-family: monospace, sans-serif;
   background-color: rgb(214, 214, 214);
   color: rgb(32, 32, 32);
   background-color: rgb(32, 32, 32);
@@ -23,6 +23,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 100px;
+  color: #eef104;
 }
 
 .nav-bar {
@@ -46,7 +47,8 @@ nav {
 .nav-link {
   text-decoration: none;
   font-size: 20px;
-  color: rgb(255, 209, 0);
+  color: black;
+  font-weight: 600;
 }
 .nav-link:hover {
   /* Underline From Center */
@@ -133,4 +135,15 @@ section {
 }
 .hover_img a:hover span {
   display: block;
+}
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
