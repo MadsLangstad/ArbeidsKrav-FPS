@@ -9,71 +9,95 @@
   </head>
   <body>
     <header>
-      <!--CONSIDER: 2x LOGO in/dropdown menu/ mute/un-mute(if audio implemented) instead of authors(authors in footer instead)-->
-      <div class="jonas-container">Jonas E. Bergenheim</div>
-      <nav>
-        <!--TO DO: Add go to SECTION on LINK:CLICK |SIGN|NOT DONE-->
-        <ul class="nav-links">
-          <li><a class="nav-link" href="">LINK1</a></li>
-          <li><a class="nav-link" href="">LINK2</a></li>
-          <li><a class="nav-link" href="">LINK3</a></li>
-        </ul>
-      </nav>
-      <div class="mads-container">Mads E. Langstad</div>
+      <div class="nav-bar">
+        <!--CONSIDER: 2x LOGO in/dropdown menu/ mute/un-mute(if audio implemented) instead of authors(authors in footer instead)-->
+
+        <nav>
+          <!--TO DO: Add go to SECTION on LINK:CLICK |DONE-->
+          <ul class="nav-links">
+            <li>
+              <a class="nav-link" href="#introduction-anchor">Introduction</a>
+            </li>
+            <li><a class="nav-link" href="#history-anchor">History</a></li>
+            <li>
+              <a class="nav-link" href="#best-games-anchor">Best FPS games</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!--TO DO - Replace title with LOGO/Image (position relative/absolute)-->
+      <div class="headline">
+          <h1 id="page-title">PLACEHOLDER</h1>
+        </div>
+      </div>
     </header>
     <!--TO DO MAIN:-->
     <main>
       <!--TO DO: Make text boxes in content scrollable and no overflow |SIGN|NOT DONE-->
-      <section class="introduction">
-        <div class="introduction-text">
-          <h2>Introduction</h2>
-          <!--TO DO: FPS marked with strong: create hover and display image on hover| SIGN |NOT DONE|  -->
+      <section>
+        <section class="introduction" id="introduction-anchor">
+          <div class="introduction-text">
+            <h2>Introduction</h2>
+            <!--TO DO: FPS marked with strong: create hover and display image on hover||DONE|  -->
+            <!--TO DO: Add animation FADE IN FADE OUT on above-->
 
-          <p>
-            First-person shooter (FPS) is a sub-genre of shooter video games
-            centered on gun and other weapon-based combat in a
-            <strong>first-person perspective</strong>, with the player
-            experiencing the action through the eyes of the protagonist and
-            controlling the player character in a three-dimensional space.<br />The
-            genre shares common traits with other shooter games, and in turn
-            falls under the action game genre.<br />
-            Since the genre's inception, advanced 3D and pseudo-3D graphics have
-            challenged hardware development, and multiplayer gaming has been
-            integral.
-          </p>
-        </div>
-        <!--TO DO: Section images on:hover = Display different Images |SIGN|NOT DONE| -->
-        <div class="introduction-image-container">
-          <img
-            class="section-image"
-            src="./images/cs-section-image.png"
-            alt="Countrstrike"
-          />
-        </div>
-      </section>
-      <section class="description">
-        <div class="description-text">
-          <h2>HISTORY</h2>
-          <p>A bunch of shit about the history of first person shooter?</p>
-        </div>
-        <div class="description-image-container">
-          <img
-            class="section-image"
-            src="./images/tarkov-section-image.jpg"
-            alt="PlaceholderIMG"
-          />
-        </div>
-      </section>
-      <section class="best-games">
-        <div class="best-games-text">
-          <h2>BEST GAMES</h2>
-          <p>A bunch of shit about the best games</p>
-        </div>
-        <div class="best-games-image-container">
-          <img src="" alt="" />
-        </div>
+            <p>
+              First-person shooter (FPS) is a sub-genre of shooter video games
+              centered on gun and other weapon-based combat in a
+              <div class="hover_img">
+                <a href="#">first person perspective<span><img src="./images/fpsview.jpg" alt="image" height="300"/></span></a></div>  The
+              player is experiencing the action through the eyes of the protagonist
+              and controlling the player character in a three-dimensional
+              space.<br />The genre shares common traits with other shooter
+              games, and in turn falls under the action game genre.<br />
+              Since the genre's inception, advanced 3D and pseudo-3D graphics
+              have challenged hardware development, and multiplayer gaming has
+              been integral.
+            </p>
+          </div>
+          <!--TO DO: Section images on:hover = Display different Images |SIGN|NOT DONE| -->
+          <div class="introduction-image-container">
+            <img
+              class="section-image"
+              src="./images/cs-section-image.png"
+              alt="Countrstrike"
+            />
+          </div>
+        </section>
+
+        <section class="history" id="history-anchor">
+          <div class="history-text">
+            <h2>HISTORY</h2>
+            <p>The earliest two documented first-person shooter video games are Maze War and Spasim. 
+              Maze War was originally developed in 1973 by Greg Thompson, Steve Colley and Howard Palmer, high-school students in a NASA work-study program trying to develop a program to help visualize fluid dynamics for spacecraft designs.
+              The work became a maze game presented to the player in the first-person, and later included support for a second player and the ability to shoot the other player to win the game.
+              Thompson took the game's code with him to Massachusetts Institute of Technology,
+              where with help from Dave Lebling to create an eight-player version that could be played over ARPANET, 
+              computer-run players using artificial intelligence, customizable maps, online scoreboards and a spectator mode. Spasim had a documented debut at the University of Illinois in 1974. The game was a rudimentary space flight simulator for up to 32 players, featuring a first-person perspective.[8] Both games were distinct from modern first-person shooters, involving simple tile-based movement where the player could only move from square to square and turn in 90-degree increments.</p>
+          </div>
+          <div class="history-image-container">
+            <img
+              class="section-image"
+              src="./images/tarkov-section-image.jpg"
+              alt="PlaceholderIMG"
+            />
+          </div>
+        </section>
+        <section class="best-games" id="best-games-anchor">
+          <div class="best-games-text">
+            <h2>BEST GAMES</h2>
+            <p>A bunch of shit about the best games</p>
+          </div>
+          <div class="best-games-image-container">
+            <img
+              class="section-image"
+              src="./images/tarkov-section-image.jpg"
+              alt="Placeholder2"
+            />
+          </div>
+        </section>
       </section>
     </main>
-    <footer>MADE BY ECT ECT</footer>
+    <footer>Made by ect ect ect ect</footer>
   </body>
 </html>

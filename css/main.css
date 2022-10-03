@@ -1,56 +1,136 @@
+/*TO DO: Decide Font and background color*/
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 body {
   font-family: sans-serif;
+  background-color: rgb(214, 214, 214);
+  color: rgb(32, 32, 32);
+  background-color: rgb(32, 32, 32);
 }
-header {
+.headline {
   display: flex;
-  background: rgb(238, 255, 0);
+  justify-content: center;
+  padding: 100px;
+}
+
+.nav-bar {
+  display: flex;
   width: 90%;
   height: 10vh;
   margin: auto;
   align-items: center;
 }
 nav {
-  background-color: red;
   flex: 2;
 }
-.jonas-container {
-  background-color: green;
-  flex: 1;
-}
-.mads-container {
-  background-color: aqua;
-  flex: 1;
-}
-.jonas-container,
-.mads-container,
+
 .nav-links {
   display: flex;
   list-style: none;
 }
 .nav-links {
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .nav-link {
   text-decoration: none;
+  font-size: 20px;
+  color: rgb(255, 209, 0);
 }
+.nav-link:hover {
+  /* Underline From Center */
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.nav-link:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #eef104;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.nav-link:hover:before,
+.nav-link:focus:before,
+.nav-link:active:before {
+  left: 0;
+  right: 0;
+}
+
 /* TO DO: Section Images on:hover = display different pictures|SIGN|NOT DONE| */
+/*TO DO: Align Section image on RIGHT SECTION edge|SIGN|NOT DONE| */
 section {
   display: flex;
-  width: 90%;
-  background-color: aqua;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgba(255, 238, 50, 0.1);
 }
-.introduction {
-  justify-content: flex-start;
+/* TO DO:ADD ON HOVER - Some cool animation shit*/
+.introduction-text,
+.history-text,
+.best-games-text {
+  flex: 1;
+
+  padding: 20px;
+  margin: 40px 40px;
+  color: rgb(0, 0, 0);
 }
-.introduction-image-container {
-  justify-content: flex-end;
+.introduction-text:hover,
+.history-text:hover,
+.best-games-text:hover {
+  background-color: yellow;
 }
+
+/* TO DO:ADD ON HOVER - Some cool animation shit*/
+.introduction-image-container,
+.history-image-container,
+.best-games-image-container {
+  flex: 1;
+  margin: 20px;
+  opacity: 0.8;
+}
+
 .section-image {
-  height: 40vh;
+  /*fixed image size*/
+  height: 30vh;
+  /*width: 100%;/
+  /*height: auto; for scalable images*/
+}
+.hover_img a {
+  position: relative;
+}
+.hover_img a span {
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
+.hover_img a:hover span {
+  display: block;
 }
