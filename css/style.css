@@ -14,12 +14,19 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  position: relative;
 }
 
 body {
+  background: #333533;
   display: flex;
+  position: relative;
+}
+.container {
+  width: min(90%, 1000px);
+}
+
+.heading > h1 {
+  background-color: red;
 }
 
 #img-top {
@@ -56,11 +63,11 @@ body {
 .sight {
   position: relative;
   top: 330px;
-  left: 280%;
+  left: 10%;
   min-height: 250px;
   min-width: 250px;
   border: 4px solid black;
-  border-radius: 100%;
+  border-radius: 50%;
   z-index: 0;
 }
 
@@ -113,16 +120,42 @@ body {
   width: 10px;
   border-radius: 10px;
   background: red;
+  box-shadow: 0px 0px 6px 2px #ff0000;
 }
 
+.link {
+  position: absolute;
+  top: -3.5px;
+  text-decoration: none;
+  display: block;
+}
 #ak {
   position: absolute;
-  right: 0;
+  right: 10%;
+  bottom: -300px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  top: 150%;
+  transform: rotate(30deg);
+  animation-name: akMove;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: backwards;
 }
 
 #m4a1 {
   position: absolute;
-  left: 0;
+  left: 10%;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  top: 105%;
+  transform: rotate(-30deg);
+  animation-name: m4a1Move;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes moveUp {
@@ -140,5 +173,31 @@ body {
   }
   100% {
     bottom: -50vh;
+  }
+}
+
+@keyframes m4a1Move {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  80% {
+    transform: rotate(-120deg);
+  }
+  100% {
+    left: 10%;
+  }
+}
+
+@keyframes akMove {
+  0% {
+    position: absolute;
+    right: -100%;
+  }
+  80% {
+    transform: rotate(120deg);
+  }
+  100% {
+    right: 10%;
   }
 }
