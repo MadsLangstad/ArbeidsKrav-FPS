@@ -14,7 +14,7 @@ html {
   }
 }
 body {
-  font-family: sans-serif;
+  font-family: monospace, sans-serif;
   background-color: rgb(214, 214, 214);
   color: rgb(32, 32, 32);
   background-color: rgb(32, 32, 32);
@@ -23,6 +23,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 100px;
+  color: #eef104;
 }
 
 .nav-bar {
@@ -46,7 +47,8 @@ nav {
 .nav-link {
   text-decoration: none;
   font-size: 20px;
-  color: rgb(255, 209, 0);
+  color: black;
+  font-weight: 600;
 }
 .nav-link:hover {
   /* Underline From Center */
@@ -106,6 +108,9 @@ section {
 .history-text:hover,
 .best-games-text:hover {
   background-color: yellow;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
 }
 
 /* TO DO:ADD ON HOVER - Some cool animation shit*/
@@ -133,4 +138,104 @@ section {
 }
 .hover_img a:hover span {
   display: block;
+}
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@-webkit-keyframes imageCycle {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.best-games-image-container {
+  position: relative;
+  height: 50vh;
+
+  margin: 0 auto;
+}
+.best-games-image-container img {
+  position: absolute;
+  left: 0;
+  height: 40vh;
+}
+
+.best-games-image-container:hover img {
+  -webkit-animation-name: cimageCycle;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+
+  -moz-animation-name: imageCycle;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 8s;
+
+  -o-animation-name: imageCycle;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 8s;
+
+  animation-name: imageCycle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+.best-games-image-container img:nth-of-type(1) {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
+}
+.best-games-image-container img:nth-of-type(2) {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+.best-games-image-container img:nth-of-type(3) {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.best-games-image-container img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 20px;
+  gap: 200px;
+  font-style: italic;
+  color: #eef104;
+  background-color: rgba(255, 238, 50, 0.1);
+}
+#made-by {
+  font-style: normal;
 }
