@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
   </head>
   <body>
+    <!--Background Video/Animated Image-->
+    <video autoplay muted loop id="myVideo">
+      <source src="./images/tacticool.webm" type="video/mp4" />
+    </video>
     <header>
       <div class="nav-bar">
         <!--CONSIDER: 2x LOGO in/dropdown menu/ mute/un-mute(if audio implemented) instead of authors(authors in footer instead)-->
@@ -25,7 +29,8 @@
           </ul>
         </nav>
       </div>
-      <!--TO DO - Replace title with LOGO/Image (position relative/absolute)-->
+      <!--TO DO - Replace title with LOGO/Image (position relative/absolute) |DONE|-->
+      <!--TO DO - Animate Logo ||-->
       <div class="headline">
           <div class="headline-image"><img src="./images/Main Logo.png" alt="Headline Image"></div>
         </div>
@@ -39,7 +44,7 @@
           <div class="introduction-text">
             <h2>Introduction</h2>
             <!--TO DO: FPS marked with strong: create hover and display image on hover||DONE|  -->
-            <!--TO DO: Add animation FADE IN FADE OUT on above-->
+            <!--TO DO: Add animation FADE IN FADE OUT on text sections || -->
 
             <p>
               First-person shooter (FPS) is a sub-genre of shooter video games
@@ -71,36 +76,59 @@
             <p>The earliest two documented first-person shooter video games are Maze War and Spasim. 
               Maze War was originally developed in 1973 by Greg Thompson, Steve Colley and Howard Palmer, high-school students in a NASA work-study program trying to develop a program to help visualize fluid dynamics for spacecraft designs.<br>
               The work became a maze game presented to the player in the first-person, and later included support for a second player and the ability to shoot the other player to win the game.<br></br>
-              Thompson took the game's code with him to Massachusetts Institute of Technology,
-              where with help from Dave Lebling to create an eight-player version that could be played over ARPANET, 
-              computer-run players using artificial intelligence, customizable maps, online scoreboards and a spectator mode. Spasim had a documented debut at the University of Illinois in 1974. The game was a rudimentary space flight simulator for up to 32 players, featuring a first-person perspective.[8] Both games were distinct from modern first-person shooters, involving simple tile-based movement where the player could only move from square to square and turn in 90-degree increments.</p>
+              In 1992 Wolfenstein 3d was released and it was an instant success and it has been credited with inventing the first-person shooter genre. 
+              It was built on the ray casting technology pioneered in earlier games to create a revolutionary
+              template for shooter game design, which first-person shooters are still based upon today.</p>
           </div>
           <div class="history-image-container">
             <img
               class="section-image"
-              src="./images/tarkov-section-image.jpg"
-              alt="PlaceholderIMG"
+              src="/images/half-life.png"
+              alt="Half Life"
             />
+            <img class="section-image" src="/images/wulfen.webp" alt="Wulfenstein 3d">
+            
           </div>
         </section>
         <section class="best-games" id="best-games-anchor">
           <div class="best-games-text">
             <h2>BEST GAMES</h2>
-            <p>A bunch of shit about the best games</p>
+            <p>
+              Today first-person-shooters are more popular then ever. Some of the leading competitors in the genre today are games like:
+              Counter-strike:Global offensive, Call of duty: warzone and my personal favorite Escape From Tarkov!<br></br>
+            Hover the image to the right to see some of the leading titles.</p>
           </div>
           <div class="best-games-image-container">
             <img
+            class="section-image"
+            src="/images/RainbowSixSiege.jpg"
+            alt="Placeholder2"
+          />
+            <img
               class="section-image"
               src="./images/tarkov-section-image.jpg"
+              alt="Tarkov"
+            />
+            <img
+              class="section-image"
+              src="./images/CodWarzone.jpg"
+              alt="CoD Warzone"
+            />
+           
+            <img
+              class="section-image"
+              src="/images/TeamFortress2.jpeg"
               alt="Placeholder2"
             />
           </div>
         </section>
+        
       </section>
-      <video autoplay muted loop id="myVideo">
-        <source src="./images/tacticool.webm" type="video/mp4" />
-      </video>
     </main>
-    <footer>Made by ect ect ect ect</footer>
+    <footer>
+      <p id="made-by">Made by:</p>
+      <p>Jonas E. Bergenheim</p>
+      <p>Mats E. Langstad</p>
+    </footer>
   </body>
 </html>
