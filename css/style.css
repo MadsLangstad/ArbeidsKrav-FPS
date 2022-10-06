@@ -12,7 +12,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(48, 44, 44);
+  background: black;
   scroll-behavior: smooth;
   border-radius: 100vh;
 }
@@ -20,9 +20,6 @@
   background: rgb(234, 255, 0);
   border-radius: 100vh;
   border: 2px solid black;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(234, 255, 0);
 }
 
 #img-top {
@@ -63,7 +60,7 @@ body {
 .container {
   justify-content: center;
   width: min(90%, 300rem);
-  height: 230vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -97,15 +94,17 @@ body {
   right: 15%;
   animation-name: moveAkInRight;
   animation-duration: 2s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
 #m4a1 {
   position: absolute;
-  top: 40%;
-  right: 15%;
+  top: 31%;
+  left: 15%;
   animation-name: moveM4a1InLeft;
   animation-duration: 2s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -133,6 +132,7 @@ body {
   }
   80% {
     left: 15%;
+    transform: rotate(-40deg);
   }
   100% {
     transform: rotate(-20deg);
@@ -145,6 +145,7 @@ body {
   }
   80% {
     right: 15%;
+    transform: rotate(40deg);
   }
   100% {
     transform: rotate(20deg);
