@@ -109,8 +109,6 @@ nav {
   right: 0;
 }
 
-/* TO DO: Section Images on:hover = display different pictures|SIGN|NOT DONE| */
-/*TO DO: Align Section image on RIGHT SECTION edge|SIGN|NOT DONE| */
 section {
   display: flex;
   justify-content: center;

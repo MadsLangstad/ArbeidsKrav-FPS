@@ -1,16 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Scroll Bar */
 ::-webkit-scrollbar {
   width: 0.6em;
   scroll-behavior: smooth;
 }
-
 ::-webkit-scrollbar-track {
   background: black;
   scroll-behavior: smooth;
@@ -22,6 +20,7 @@
   border: 2px solid black;
 }
 
+/* Metal door */
 #img-top {
   position: absolute;
   position: fixed;
@@ -34,7 +33,7 @@
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
-
+/* Metal door */
 #img-bottom {
   position: absolute;
   position: fixed;
@@ -70,8 +69,8 @@ body {
 
 #ak {
   position: absolute;
-  top: 40%;
-  right: 15%;
+  top: 38%;
+  right: 10%;
   animation-name: moveAkInRight;
   animation-duration: 2s;
   animation-delay: 1s;
@@ -81,14 +80,14 @@ body {
 #m4a1 {
   position: absolute;
   top: 32%;
-  left: 15%;
+  left: 10%;
   animation-name: moveM4a1InLeft;
   animation-duration: 2s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
-/* Circle animation */
+/* Circle-link animation */
 .circle-animation {
   position: absolute;
   left: 50%;
@@ -228,7 +227,7 @@ body {
   position: relative;
   letter-spacing: 2px;
   font-size: 22px;
-  font-family: monospace;
+  font-family: monospace, sans-serif;
   margin: 50px;
   padding: 55px 0 0 0;
   height: 110px;
@@ -253,6 +252,7 @@ body {
   opacity: 1;
 }
 
+/* Moves metal door from center and up on load */
 @keyframes moveUp {
   0% {
     top: 0;
@@ -261,7 +261,7 @@ body {
     top: -50vh;
   }
 }
-
+/* Moves metal door from center and down on load */
 @keyframes moveDown {
   0% {
     bottom: 0;
@@ -271,12 +271,13 @@ body {
   }
 }
 
+/* Moves m4a1 in from left */
 @keyframes moveM4a1InLeft {
   0% {
     left: -100%;
   }
   80% {
-    left: 15%;
+    left: 10%;
     transform: rotate(-40deg);
   }
   100% {
@@ -284,12 +285,13 @@ body {
   }
 }
 
+/* Moves ak in from right */
 @keyframes moveAkInRight {
   0% {
     right: -100%;
   }
   80% {
-    right: 15%;
+    right: 10%;
     transform: rotate(40deg);
   }
   100% {
@@ -297,8 +299,7 @@ body {
   }
 }
 
-/* circle-fade */
-
+/* Animated-circle-link-fade */
 @keyframes fade {
   0% {
     opacity: 0;
@@ -317,6 +318,16 @@ body {
     top: 30%;
   }
 }
+
+@media (max-width: 1560px) {
+  #m4a1 {
+    top: 50%;
+  }
+  #ak {
+    top: 56%;
+  }
+}
+
 /* under 930px query */
 @media (max-width: 930px) {
   .box1 img {
