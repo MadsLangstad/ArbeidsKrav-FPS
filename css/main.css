@@ -8,6 +8,30 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 0.6em;
+  scroll-behavior: smooth;
+  z-index: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(48, 44, 44);
+  scroll-behavior: smooth;
+  border-radius: 100vh;
+  z-index: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(234, 255, 0);
+  border-radius: 100vh;
+  border: 2px solid black;
+  z-index: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(234, 255, 0);
+  z-index: 0;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
