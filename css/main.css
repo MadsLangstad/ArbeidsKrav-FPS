@@ -48,6 +48,8 @@ body {
   justify-content: center;
   padding: 100px;
   color: #eef104;
+  animation-name: fadeIn;
+  animation-duration: 5s;
 }
 
 .nav-bar {
@@ -174,7 +176,20 @@ section {
   bottom: 0;
   z-index: -1;
 }
-@-webkit-keyframes imageCycle {
+
+.headline-image {
+  animation: fadeIn 6s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes imageCycle {
   0% {
     opacity: 1;
   }
